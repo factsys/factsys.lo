@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:hx="http://purl.org/NET/hinclude">
+<head>
+{# include header #}
+{% include '::base.header.twig' %}
+</head>
+<body>
+        {# include flash messages#}
+        {% include '::base.flash.twig' %}
+        {% block body %}
+
+        {% endblock %}        
+        {# include footer #}
+        {% include '::base.footer.twig' %}
+        {% block javascripts %}{% endblock %}
+</body>
+</html>

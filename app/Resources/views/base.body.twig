@@ -1,0 +1,8 @@
+{% block body %}
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="flash-notice">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+        {% block javascripts %}{% endblock %}
+{% endblock %}

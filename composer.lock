@@ -1,0 +1,174 @@
+{
+    "hash": "a418431270f5d21396b40058014b4e67",
+    "packages": [
+        {
+            "package": "alphalemon/app-business-menu-bundle",
+            "version": "dev-master",
+            "source-reference": "2d623f64e96aa4a3d5f02824c6299d2ac7a2c17b",
+            "commit-date": "1346581406"
+        },
+        {
+            "package": "doctrine/common",
+            "version": "2.3.0-RC2"
+        },
+        {
+            "package": "doctrine/data-fixtures",
+            "version": "dev-master",
+            "source-reference": "379a5f19e23849cf082613e2e91ed02bd2ee4fb1",
+            "commit-date": "1347551292"
+        },
+        {
+            "package": "doctrine/dbal",
+            "version": "2.3.0-RC3"
+        },
+        {
+            "package": "doctrine/doctrine-bundle",
+            "version": "v1.0.0"
+        },
+        {
+            "package": "doctrine/doctrine-fixtures-bundle",
+            "version": "dev-master",
+            "source-reference": "186d605aa6b592bd577e07e0e9a2c420b02b2492",
+            "commit-date": "1345465418"
+        },
+        {
+            "package": "doctrine/orm",
+            "version": "2.3.0-RC3"
+        },
+        {
+            "package": "friendsofsymfony/user-bundle",
+            "version": "1.1.0"
+        },
+        {
+            "package": "jms/aop-bundle",
+            "version": "1.0.0"
+        },
+        {
+            "package": "jms/cg",
+            "version": "1.0.0"
+        },
+        {
+            "package": "jms/di-extra-bundle",
+            "version": "1.1.0"
+        },
+        {
+            "package": "jms/metadata",
+            "version": "1.1.1"
+        },
+        {
+            "package": "jms/security-extra-bundle",
+            "version": "1.2.0"
+        },
+        {
+            "package": "knplabs/knp-components",
+            "version": "v1.1"
+        },
+        {
+            "package": "knplabs/knp-menu",
+            "version": "v1.1.2"
+        },
+        {
+            "package": "knplabs/knp-menu-bundle",
+            "version": "v1.1.0"
+        },
+        {
+            "package": "knplabs/knp-paginator-bundle",
+            "version": "dev-master",
+            "source-reference": "de439d2816fe984dbe0c438fd4d0d7c67748c5ff",
+            "commit-date": "1343676956"
+        },
+        {
+            "package": "kriswallsmith/assetic",
+            "version": "v1.1.0-alpha1"
+        },
+        {
+            "package": "liip/url-auto-converter-bundle",
+            "version": "dev-master",
+            "source-reference": "47b2eec007be64b883ac3ec526941ca8231b9f01",
+            "commit-date": "1340877751"
+        },
+        {
+            "package": "monolog/monolog",
+            "version": "1.2.1"
+        },
+        {
+            "package": "ornicar/gravatar-bundle",
+            "version": "dev-master",
+            "source-reference": "994424a846f30f64e324e1b95a21c9f3b4ad237a",
+            "commit-date": "1347006002"
+        },
+        {
+            "package": "pimple/pimple",
+            "version": "dev-master",
+            "alias-pretty-version": "1.0.x-dev",
+            "alias-version": "1.0.9999999.9999999-dev"
+        },
+        {
+            "package": "pimple/pimple",
+            "version": "dev-master",
+            "source-reference": "b9f27b8dc18c08f00627dec02359b46a24791dc3",
+            "commit-date": "1347278988"
+        },
+        {
+            "package": "sensio/distribution-bundle",
+            "version": "v2.1.0"
+        },
+        {
+            "package": "sensio/framework-extra-bundle",
+            "version": "v2.1.0"
+        },
+        {
+            "package": "sensio/generator-bundle",
+            "version": "v2.1.0"
+        },
+        {
+            "package": "silex/silex",
+            "version": "dev-master",
+            "source-reference": "a9e34f08ab00c4cc6c97e7ae8fdf7d0fc367e5f5",
+            "commit-date": "1347298149"
+        },
+        {
+            "package": "swiftmailer/swiftmailer",
+            "version": "v4.2.1"
+        },
+        {
+            "package": "symfony/assetic-bundle",
+            "version": "v2.1.0"
+        },
+        {
+            "package": "symfony/monolog-bundle",
+            "version": "v2.1.0"
+        },
+        {
+            "package": "symfony/swiftmailer-bundle",
+            "version": "v2.1.0"
+        },
+        {
+            "package": "symfony/symfony",
+            "version": "v2.1.1"
+        },
+        {
+            "package": "twig/extensions",
+            "version": "v1.0.0-alpha"
+        },
+        {
+            "package": "twig/twig",
+            "version": "v1.9.2"
+        }
+    ],
+    "packages-dev": null,
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "knplabs/knp-paginator-bundle": 20,
+        "pimple/pimple": 20,
+        "silex/silex": 20,
+        "ornicar/gravatar-bundle": 20,
+        "liip/url-auto-converter-bundle": 20,
+        "alphalemon/app-business-menu-bundle": 20,
+        "doctrine/doctrine-fixtures-bundle": 20,
+        "doctrine/data-fixtures": 20
+    }
+}

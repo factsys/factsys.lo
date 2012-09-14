@@ -1,0 +1,125 @@
+Acme\FactsysBundle\Entity\Registro:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        rfc:
+            type: string
+            length: '18'
+        nombre_municipio:
+            type: string
+            length: '65'
+        direccion:
+            type: string
+            length: '45'
+        ciudad:
+            type: string
+            length: '35'
+        estado:
+            type: string
+            length: '25'
+        pais:
+            type: string
+            length: '35'
+        telefono:
+            type: string
+            length: '25'
+        fax:
+            type: string
+            length: '25'
+        contacto:
+            type: string
+            length: '255'
+        sha_key:
+            type: string
+            length: '255'
+        estatuto:
+            type: boolean
+            length: null
+        fecha_alta:
+            type: date
+            length: null
+        fecha_ult_mvto:
+            type: date
+            length: null
+        fecha_caduca:
+            type: date
+            length: null
+        periodo_nombre:
+            type: string
+            length: '75'
+        periodo_tipo:
+            type: string
+            length: '35'
+        periodo_unidades:
+            type: integer
+            lenght: null
+        periodo_actual:
+            type: integer
+            lenght: null
+        periodos_en_ejercicio:
+            type: integer
+            lenght: null
+        periodo_fecha_inicio:
+            type: date
+            lenght: null
+        periodo_fecha_final:
+            type: date
+            lenght: null
+        periodo_acumulado_actual:
+            type: float
+            lenght: null
+        periodo_acumulado_ejercicio:
+            type: float
+            lenght: null      
+        periodo_acumulado_total:
+            type: float
+            lenght: null
+        ejercicio_nombre:
+            type: string
+            length: '75'
+        ejercicio_tipo:
+            type: string
+            length: '35'
+        ejercicio_unidades:
+            type: integer
+            lenght: null
+        ejercicio_actual:
+            type: integer
+            lenght: null
+        ejercicios_en_mandato:
+            type: integer
+            lenght: null
+        ejercicio_fecha_inicio:
+            type: date
+            lenght: null
+        ejercicio_fecha_final:
+            type: date
+            lenght: null
+        ejercicio_acumulado_actual:
+            type: float
+            lenght: null
+        ejercicio_acumulado_ejercicio:
+            type: float
+            lenght: null      
+        ejercicio_acumulado_total:
+            type: float
+            lenght: null
+        factura_actual:
+            type: string
+            length: '48'
+        documento_actual:
+            type: string
+            length: '48'
+        recibo_actual:
+            type: string
+            length: '48'
+        notas:
+            type: text
+            length: null
+         
+    lifecycleCallbacks: {  }

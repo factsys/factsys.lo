@@ -1,0 +1,139 @@
+Acme\FactsysBundle\Entity\Registro:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        rfc:
+            type: string
+            length: '25'
+        nombre_municipio:
+            type: string
+            length: '25'
+        direccion:
+            type: string
+            length: '45'
+        ciudad:
+            type: string
+            length: '35'
+        estado:
+            type: string
+            length: '25'
+        pais:
+            type: string
+            length: '35'
+        telefono:
+            type: string
+            length: '25'
+        fax:
+            type: string
+            length: '25'
+        contacto:
+            type: string
+            length: '35'
+        sha_key:
+            type: string
+            length: '255'
+        estatuto:
+            type: boolean
+            length: null
+        fecha_alta:
+            type: date
+            length: null
+        fecha_ult_mvto:
+            type: date
+            length: null
+        fecha_caduca:
+            type: date
+            length: null
+        notas:
+            type: text
+            length: null
+        ## parametros
+        periodo_nombre:
+          ## semanal, quincenal, mensual, bimensual,trimensual,etc          
+          type: string
+          lenght: '35'
+        periodo_tipo:
+          ## day, week, month, year
+          type: string
+          lenght: '15'
+        periodo_unidades:
+          ##if periodo_tipo='month' 
+          ##and this = 2, next period = every 2 months
+          type: integer
+          lenght: null
+        periodo_actual:
+          type: integer
+          lenght: null
+        periodos_en_ejercicio:
+          type: integer
+          lenght: null
+        periodo_fecha_inicio:
+          type: date
+          lenght: null
+        periodo_fecha_final:
+          type: date
+          lenght: null
+        periodo_acumulado_actual:
+          type: float
+          lenght: null
+        periodo_acumulado_ejercicio:
+          type: float
+          lenght: null      
+        periodo_acumulado_total:
+          type: float
+          lenght: null
+        ## ejercicio
+        ejercicio_nombre:
+          ## semanal, quincenal, mensual, bimensual,trimensual,etc          
+          type: string
+          lenght: '35'
+        ejercicio_tipo:
+          ## day, week, month, year
+          type: string
+          lenght: '15'
+        ejercicio_unidades:
+          ##if ejercicio_tipo='year' 
+          ##and this = 6, next period = every 6 years , 1 sexenio
+          type: integer
+          lenght: null
+        ejercicio_actual:
+          type: integer
+          lenght: null
+        ejercicios_en_mandato:
+          ## vsya la redundancia, osea numero de terminos
+          ## por el mandato de 3 años, etc
+          type: integer
+          lenght: null
+        ejercicio_fecha_inicio:
+          type: date
+          lenght: null
+        ejercicio_fecha_final:
+          type: date
+          lenght: null
+        ejercicio_acumulado_actual:
+          type: float
+          lenght: null
+        ejercicio_acumulado_ejercicio:
+          type: float
+          lenght: null      
+        ejercicio_acumulado_total:
+          type: float
+          lenght: null
+        ## variables del system
+        factura_actual:
+          type: string
+          lenght: '20'
+          lenght: null
+        documento_actual:
+          type: string
+          lenght: '20'
+        recibo_actual:
+          type: string
+          lenght: '20'
+          
+    lifecycleCallbacks: {  }

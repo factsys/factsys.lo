@@ -1,0 +1,17 @@
+<meta charset="UTF-8" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ 
+<!-- mainmenu style types -->
+{% stylesheets output='css/style.css' '@AcmeFactsysBundle/Resources/public/css/style.css' %}
+<link rel="stylesheet" href="{{ asset_url }}" type="text/css" /><style>._css3m{display:none}</style>
+<!-- End mainmenustyle -->
+{% endstylesheets %}
+
+{% stylesheets output='css/min.style.css' '@AcmeFactsysBundle/Resources/public/css/*' %}
+<link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="all" />
+{% endstylesheets %}
+
+{% javascripts '@AcmeFactsysBundle/Resources/public/js/*'%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />

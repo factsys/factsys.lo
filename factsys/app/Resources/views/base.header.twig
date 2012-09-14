@@ -1,0 +1,8 @@
+<meta charset="UTF-8" />
+{% stylesheets output='css/min.style.css' '@AcmeFactsysBundle/Resources/public/css/*' %}
+<link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="all" />
+{% endstylesheets %}
+{% javascripts '@AcmeFactsysBundle/Resources/public/js/*'%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />

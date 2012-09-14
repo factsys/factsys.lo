@@ -1,0 +1,125 @@
+#recreate my databases
+rm -rf app/cache/*
+rm -rf app/logs/*
+app/console doctrine:database:drop --force
+app/console doctrine:database:create
+php app/console cache:clear --env=prod --no-debug
+# renombre src/Acme/FactsysBundle/Resources/doctrine/Registro.orm.yml
+# y corra
+php app/console doctrine:generate:entity --entity="AcmeFactsysBundle:Registro"
+# copia viejo en nuevo generado y:
+php app/console doctrine:generate:entities Acme/FactsysBundle/Entity/Registro
+php app/console doctrine:schema:update --force
+# cierra los .php viejos o recargalos con nuevo codigo
+# src/Acme/FactsysBundle/*
+
+
+#create forn
+php app/console generate:doctrine:form AcmeFactsysBundle:Registro
+
+
+#recreate schema, entity
+php app/console doctrine:schema:update --force
+
+#recreate database entity
+php app/console doctrine:generate:entities Acme/
+
+## create database schemas
+php app/console doctrine:generate:entity --entity="AcmeFactsysBundle:Registro" --fields="rfc:string(25) nombre:string(25) direccion:string(45) ciudad:string(35) estado:string(25) pais:string(35) telefono:string(25) fax:string(25) contacto:string(35) sha:string(255) estatuto:boolean fecha_alta:date fecha_ult_mvto:date fecha_caduca:date notas:text" --format=yml
+
+
+##recreate databases
+app/console doctrine:database:drop --force
+app/console doctrine:database:create
+
+#visualize routes
+php app/console router:debug
+
+##list available services
+php app/console container:debug
+
+#crear caches
+rm -rf app/cache/*
+rm -rf app/logs/*
+php app/console cache:clear --env=prod --no-debug
+
+
+#create my bundle
+php app/console generate:bundle --namespace=Acme/FactsysBundle --format=yml
+
+# crear prod cache (production enviroment)
+php app/console cache:clear --env=prod --no-debug
+
+## prepare mysqld
+gksudo gedit /etc/mysql/my.cnf
+## add in mysqld
+## add by alex to  work in symfony 2.1.0
+## mar 11 sep 2012 at 01:00am
+collation-server = utf8_general_ci
+character-set-server = utf8
+
+sudo service mysql restart
+
+
+
+## prepare php.ini
+php -i|grep php.ini
+gksudo gedit /etc/php5/cli/php.ini
+##change following
+; http://php.net/date.timezone
+date.timezone = "America/Mexico_City"
+## add to th end
+
+;zend_extension="/etc/php5/xdebug.so"
+;xdebug.remote_enable=on
+;xdebug.remote_handler=dbgp
+;xdebug.remote_host=localhost
+;xdebug.remote_port=9000
+
+;para symfony 2.1.0 07-sep-2012 02:28am por alex
+suhosin.executor.include.whitelist="phar"
+
+
+
+#ubuntu Enable ACL POSIX Access Control Lists 
+sudo apt-get install acl
+#add acl to where partition
+# UUID=07aebd28-24e3-cf19-e37d-1af9a23a45d4    /home    ext4   defaults,acl   0   2
+# to
+# UUID=7b6be6e0-cef9-496e-a04e-3293397f43eb    /        ext4    defaults,acl,errors=remount-ro 0       1
+# ignore UUID= value.
+
+sudo nano /etc/fstab
+sudo mount -o remount /
+sudo setfacl -R -m u:www-data:rwx -m u:`whoami`:rwx app/cache app/logs
+
+
+#Prepare apache
+gksudo gedit /etc/apache2//sites-available/default
+##add
+<Virtualhost *:80>
+        Servername factsys.lo
+        DocumentRoot /home/alex/factsys.lo/web
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /home/alex/factsys.lo/web/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+        <Directory /home/alex/factsys.lo>
+		Options Indexes FollowSymLinks MultiViews
+           	AllowOverride All
+        </Directory>
+</Virtualhost>
+
+#edit /etc/hosts
+#add 127.0.0.1	factsys.lo
+sudo nano /etc/hosts
+
+#restart apache
+sudo service apache2 restart
+

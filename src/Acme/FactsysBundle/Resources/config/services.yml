@@ -1,0 +1,7 @@
+parameters:
+#    acme_factsys.example.class: Acme\FactsysBundle\Example
+
+services:
+#    acme_factsys.example:
+#        class: %acme_factsys.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
