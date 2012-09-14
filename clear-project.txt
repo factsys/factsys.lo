@@ -123,3 +123,7 @@ sudo nano /etc/hosts
 #restart apache
 sudo service apache2 restart
 
+#commit to github
+git commit -m "first commit"
+git remote add origin git@github.com:factsys/factsys.lo.git
+git push -u origin master
